@@ -14,6 +14,14 @@ namespace VectorParm
             int[] x = new int[MAX];
             leer(x);
             imprimir(x);
+            if (buscar(x, 15) == true)
+                Console.WriteLine("\n15 Encontrado");
+            else
+                Console.WriteLine("\n15 no existe");
+            if (buscar2(x, 23) == true)
+                Console.WriteLine("\n15 Encontrado");
+            else
+                Console.WriteLine("\n15 no existe");
             Console.ReadKey();
 
         }
@@ -34,20 +42,32 @@ namespace VectorParm
                 Console.WriteLine("\nElemento {0}", num);
             }
         }
-        public static void devolver(int[] x )
+        public static bool buscar(int[] x, int n )
         {
-            int n = 0;
-            Console.WriteLine("\nIngrese el numero {0}", n);
-            n = Int32.Parse(Console.ReadLine());
-            if (n = x[])
+            bool encontrado = false;
+            foreach (int num in x)
             {
-                Console.WriteLine("Verdadero");
+                if (num == n)
+                {
+                    encontrado = true;
+                    break;
+                }
             }
-            else
-            {
-                Console.WriteLine("Falso");
-            }
+            return encontrado;
+            
 
+        }
+        public static bool buscar2(int []x, int y)
+        {
+            bool encontrado = false;
+            int i = 0;
+            while(i<MAX && encontrado == false)
+            {
+                if (x[i] == y)
+                    encontrado = true;
+                i++;
+            }
+            return encontrado;
         }
         
 
