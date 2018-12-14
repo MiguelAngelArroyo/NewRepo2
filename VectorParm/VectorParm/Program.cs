@@ -32,6 +32,11 @@ namespace VectorParm
             Console.WriteLine("\nIngrese los Nombres");
             leerNombres(nombre);
             imprimirNombres(nombre);
+            Console.WriteLine("");
+            Console.WriteLine("");
+            OrdenarNombres(nombre);
+            Console.WriteLine("Vector ordenar");
+            imprimirNombres(nombre);
 
             Console.ReadKey();
 
@@ -49,6 +54,20 @@ namespace VectorParm
                    }
                 
             
+        }
+        public static void OrdenarNombres(string[] x)
+        {
+            string aux="";
+            for ( int i=0 ; i < x.Length; i++)
+                for (int j = i + 1; j < x.Length; j++)
+                    if (String.Compare(x[i], x[j], StringComparison.Ordinal) > 0)
+                    { //ingresar el elemento del vector
+                        aux = x[i];
+                        x[i] = x[j];
+                        x[j] = aux;
+                    }
+
+
         }
         public static void leer(int[] x)
         {
