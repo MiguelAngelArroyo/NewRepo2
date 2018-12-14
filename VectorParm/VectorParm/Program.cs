@@ -12,7 +12,7 @@ namespace VectorParm
         static void Main(string[] args)
         {
             int[] x = new int[MAX];
-            string[] x = new string[MAX];
+            string[] nombre = new string[MAX];
             leer(x);
             imprimir(x);
             Console.WriteLine("");
@@ -30,8 +30,8 @@ namespace VectorParm
                 Console.WriteLine("\n15 no existe");
             //trabajoando con el vector de caracteres
             Console.WriteLine("\nIngrese los Nombres");
-            leerNombres(nombres);
-            imprimirNombres(nombres);
+            leerNombres(nombre);
+            imprimirNombres(nombre);
 
             Console.ReadKey();
 
